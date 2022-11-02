@@ -1,0 +1,31 @@
+/************Tags*************/
+
+/************Classes*****************/
+
+
+.login-row {
+    margin-bottom:10px;
+}
+
+.login-row > label {
+    display:block;
+    margin-bottom:10px;
+}
+
+.submit-btn {
+    width:50%;
+    margin:auto;
+    margin-bottom:10px;
+}
+
+/**************Ids*******************/
+
+
+
+#login-box {
+    max-width:40%;
+    background-color:grey;
+    margin:auto;
+    text-align:center;
+}
+

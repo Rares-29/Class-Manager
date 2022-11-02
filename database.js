@@ -6,6 +6,8 @@ const db = mysql.createConnection({
     password: 'Cristi2003',
     database: 'express_db'
   })
+
+
   
 exports.db = db;
   

@@ -1,0 +1,24 @@
+<%- include ("./partials/header") %>
+
+<section id = "login">
+    <div id = "login-box">
+        <h1>Register</h1>
+        <form action = "register" method = "POST">
+            <div class = "login-row">
+                <label >Username</label>
+                <input class = "" type="text" name = "username" placeholder = "Enter your username">
+            </div>
+            <div class = "login-row">
+                <label>Password</label>
+                <input type="password" class  name = "password" placeholder = "Enter your password">
+            </div>
+            <button class = "submit-btn" type = "submit">Register</button>
+        </form>
+        <% if (show) {%>
+        <p><%= error %></p>
+        <% } %>
+        <p>Already have an acount? <a href = "login">Login here</a></p>
+    </div>
+</section>
+
+<%- include("./partials/footer") %>
