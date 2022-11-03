@@ -22,9 +22,16 @@ app.post("/register", (req, res) => {
     /// Register
     const username = req.body.username;
     const password = req.body.password;
+    const c_password = req.body.c_password;
+    const email = req.body.email;
+    const checkbox = req.body.checkbox;
+    let teacher = false;
+    if (checkbox === "on") teacher = true;
+    if (password.length < 8) res.render("register", {error: "Password length must be > 8", show: true});
+    if (c_password !== password) res.render("register", {error: "Passwords doesn't match", show: true});
     const find = "SELECT * FROM users WHERE username = ?"
-    const sql = "INSERT INTO users VALUES(UUID(), ?, ?, True)";
-    const values = [username,password];
+    const sql = "INSERT INTO users VALUES(UUID(), ?, ?,?, ?)";
+    const values = [username,password, email, teacher];
     db.query(find, username, function(err, results, fields) {
         if (err) throw err;
         else 

@@ -10,7 +10,20 @@
             </div>
             <div class = "login-row">
                 <label>Password</label>
-                <input type="password" class  name = "password" placeholder = "Enter your password">
+                <input onkeyup = "verifyPassword(this.value)" id = "password" type="password" class  name = "password" value = "" placeholder = "Enter your password">
+                <p id = "message" style = "display: none">hadad</p>
+            </div>
+            <div class = "login-row">
+                <label>Confirmation</label>
+                <input onkeyup = "matchingPassword(this.value)" type="password" id = "password2" name = "c_password" placeholder = "Confirm your password">
+                <p id = "message2" style = "display: none">babaaba</p>
+            </div>
+            <div class = "login-row">
+                <label>Email</label>
+                <input type="email" class  name = "email" placeholder = "Enter your email">
+            <div class = "login-row">
+                <label style = "margin-top:10px">Are you a teacher?</label>
+                <input type="checkbox" class  name = "checkbox">
             </div>
             <button class = "submit-btn" type = "submit">Register</button>
         </form>
