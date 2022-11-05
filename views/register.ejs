@@ -5,27 +5,23 @@
         <h1>Register</h1>
         <form action = "register" method = "POST">
             <div class = "login-row">
-                <label >Username</label>
-                <input class = "" type="text" name = "username" placeholder = "Enter your username">
+                <input class = "" type="text" name = "username" placeholder = "Enter an username">
             </div>
             <div class = "login-row">
-                <label>Password</label>
-                <input onkeyup = "verifyPassword(this.value)" id = "password" type="password" class  name = "password" value = "" placeholder = "Enter your password">
-                <p id = "message" style = "display: none">hadad</p>
+                <input onkeyup = "verifyPassword(this.value)" id = "password" type="password" class  name = "password" value = "" placeholder = "Enter a password">
+                <p id = "message" style = "display: none"></p>
             </div>
             <div class = "login-row">
-                <label>Confirmation</label>
                 <input onkeyup = "matchingPassword(this.value)" type="password" id = "password2" name = "c_password" placeholder = "Confirm your password">
-                <p id = "message2" style = "display: none">babaaba</p>
+                <p id = "message2" style = "display: none"></p>
             </div>
             <div class = "login-row">
-                <label>Email</label>
                 <input type="email" class  name = "email" placeholder = "Enter your email">
             <div class = "login-row">
                 <label style = "margin-top:10px">Are you a teacher?</label>
                 <input type="checkbox" class  name = "checkbox">
             </div>
-            <button class = "submit-btn" type = "submit">Register</button>
+            <button class = "submit-btn form-btn" type = "submit">Register</button>
         </form>
         <% if (show) {%>
         <p><%= error %></p>

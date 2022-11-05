@@ -5,14 +5,12 @@
         <h1>Login</h1>
         <form action = "login" method = "POST">
             <div class = "login-row">
-                <label >Username</label>
                 <input class = "" type="text" name = "username" placeholder = "Enter your username">
             </div>
             <div class = "login-row">
-                <label>Password</label>
                 <input type="password" class  name = "password" placeholder = "Enter your password">
             </div>
-            <button class = "submit-btn" type = "submit">Login</button>
+            <button class = "submit-btn form-btn" type = "submit">Login</button>
         </form>
         <% if (show) {%>
         <p><%= error %></p>

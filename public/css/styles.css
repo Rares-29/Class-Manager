@@ -1,21 +1,98 @@
+:root {
+    --c1: #212529;
+    --c2: #749F82;
+    --c3: #A8E890;
+    --c4: #CFFF8D;
+  }
+
 /************Tags*************/
+
+body {
+    color: #FFFFFF;
+}
+
+form {
+    margin-top:15px;
+}
+
+select {
+    display:block;
+    width:0px;
+    height:0px;
+    margin: auto;
+    border-radius: 5px;
+    border: 0px;
+    transition: 1.5s;
+
+}
+
+
+select::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+
+  select::-webkit-scrollbar-track {
+    border: rgb(180, 180, 180);
+    background-color: var(--c2);
+  }
+  
+  select::-webkit-scrollbar-thumb {
+    background-color: var(--c1);
+    border: 1px solid rgb(193, 193, 193);
+  }
+
+nav {
+    background-color: var(--c1);
+}
 
 /************Classes*****************/
 
+.active {
+    border:1px solid grey;
+    width:186px;
+    height:100px;
+    margin-bottom: 10px;
+    
+}
 
 .login-row {
     margin-bottom:10px;
 }
 
-.login-row > label {
+.form-btn {
     display:block;
-    margin-bottom:10px;
+    margin:10px auto;
+    background-color: #FFFFFF;
+    border:1px solid grey;
+    color: var(--c1);
+    border-radius: 20px;
+    width: 40%;
+    padding-top:2px;
+    padding-bottom:2px;
+    transition:0.5s;
+}
+
+.form-btn:hover {
+    width:45%;
+    padding-top:4px;
+    padding-bottom:4px;
+    background-color: var(--c1);
+    color:#FFFFFF;
 }
 
 .submit-btn {
-    width:50%;
-    margin:auto;
-    margin-bottom:10px;
+    background-color: var(--c1);
+    color: #FFFFFF;
+}
+
+.submit-btn:hover {
+    background-color: #FFFFFF;
+    color: black; 
+}
+
+.disabled {
+    pointer-events:none;
 }
 
 /**************Ids*******************/
@@ -24,8 +101,14 @@
 
 #login-box {
     max-width:40%;
-    background-color:grey;
+    background-color: var(--c1);
     margin:auto;
+    margin-top:90px;
+    padding-bottom:5px;
+    border-radius: 10px;
     text-align:center;
 }
 
+#classes {
+    margin-bottom: 10px;
+}

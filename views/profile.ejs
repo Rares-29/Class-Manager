@@ -1,5 +1,26 @@
 <%- include("./partials/header.ejs") %>
 
-<h1>Profile</h1>
+<section id = "login">
+    <div id = "login-box">
+        <h1>Setup your account</h1>
+        <form action = "profile" method = "POST">
+            <div class = "login-row">
+                <input class = "" type="text" name = "username" placeholder = "Enter your name">
+            </div>
+            <button type = "button" id = "classes" class = "form-btn">Select your classes</button>
+            <select size = "5"  name="languages" multiple id="lang">
+                  <option class = "disabled" value="select">Select your classes</option>
+                  <% classes.forEach(item => { %>
+                    <option value= <%= item %> ><%= item %></option>
+                    <% }); %>
+              </select>
 
+            <div class = "login-row">
+                <input type="text" id = "phone" name = "phone" placeholder = "Enter your phone number">
+            </div>
+            <div class = "login-row">
+                <input type="email" class  name = "email" placeholder = "Enter your email">
+            <button class = "submit-btn form-btn" type = "submit">Create your profile</button>
+        </form>
+</section>
 <%- include("./partials/footer.ejs") %>

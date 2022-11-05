@@ -22,3 +22,27 @@ function matchingPassword(value)
     message2.style.display = "none";
  }
 }
+
+var ok = 0;
+const dropdown = document.getElementById("classes");
+const selector = document.querySelector("select");
+dropdown.addEventListener("click", () => {
+  selector.classList.add("active");
+  dropdown.innerHTML = "Reset";
+  if (ok === 1)
+    options.forEach((option) => {
+      option.style.backgroundColor = "#FFFFFF";
+      option.style.color = "rgb(0,0,0)";
+    })
+  ok = 1;
+})
+
+const options = document.querySelectorAll("option");
+console.log(options);
+options.forEach((option)=> {
+  option.addEventListener("mousedown", () => {
+    option.style.backgroundColor = "#1E90FF";
+    option.style.color = "#FFFFFF";
+  })
+})
+

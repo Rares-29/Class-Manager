@@ -82,14 +82,19 @@ app.listen(3000, () => {
 })
 
 app.get("/profile", (req, res) => {
+    const find = "SELECT name from classes";
+    db.query(find, function(err, data) {
+        const classes = data.map(x => x.name);
+ 
+        res.render("profile", {classes: classes});
+    })
+})
 
+app.post("/profile", (req, res) => {
     const find = "SELECT * from users WHERE username = ?"
     const user = req.user.username;
-    let email;
+    let id;
     db.query(find, user, function(err, data) {
-        if (!err) email = data[0].email;
-        console.log(email);
-
+        if (!err) id = data[0].ID;
     })
-    res.render("profile");
 })
