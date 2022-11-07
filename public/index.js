@@ -1,3 +1,4 @@
+
 function verifyPassword(value)
 {
     const pw = value;
@@ -33,16 +34,26 @@ dropdown.addEventListener("click", () => {
     options.forEach((option) => {
       option.style.backgroundColor = "#FFFFFF";
       option.style.color = "rgb(0,0,0)";
+      option.style.pointerEvents = "auto";
     })
+  new_list = [];
   ok = 1;
 })
 
 const options = document.querySelectorAll("option");
+var new_list = [];
 console.log(options);
 options.forEach((option)=> {
   option.addEventListener("mousedown", () => {
     option.style.backgroundColor = "#1E90FF";
     option.style.color = "#FFFFFF";
+    option.style.pointerEvents = "none";
+    new_list.push(option.value);
+    console.log(new_list);
   })
 })
 
+document.querySelector(".submit-btn").addEventListener("click", function() {
+  document.getElementById("here").value = new_list;
+  console.log(new_list);
+})

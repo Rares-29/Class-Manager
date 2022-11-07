@@ -1,8 +1,8 @@
 :root {
-    --c1: #212529;
-    --c2: #749F82;
-    --c3: #A8E890;
-    --c4: #CFFF8D;
+    --c1: #1f1d36f5;
+    --c2: #FFFFFF;
+    --c3: #1f1d36;
+    --c4: #212529;
   }
 
 /************Tags*************/
@@ -38,7 +38,7 @@ select::-webkit-scrollbar {
   }
   
   select::-webkit-scrollbar-thumb {
-    background-color: var(--c1);
+    background-color: var(--c4);
     border: 1px solid rgb(193, 193, 193);
   }
 
@@ -77,12 +77,12 @@ nav {
     width:45%;
     padding-top:4px;
     padding-bottom:4px;
-    background-color: var(--c1);
+    background-color: var(--c3);
     color:#FFFFFF;
 }
 
 .submit-btn {
-    background-color: var(--c1);
+    background-color: var(--c3);
     color: #FFFFFF;
 }
 
