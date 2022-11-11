@@ -1,0 +1,22 @@
+<%- include("./partials/header", {menu: menu}) %>
+
+
+<section id = "login">
+    <div id = "login-box">
+        <h1>New assignment</h1>
+        <form action = "assignment" method = "POST">
+            <div class = "login-row">
+                <input class = "" type="text" name = "name" placeholder = "Name">
+            </div>
+            <button type = "button" id = "classes" class = "form-btn">Select a class</button>
+            <select size = "5"  name="class" id="lang">
+                  <% classes.forEach(item => { %>
+                    <option value= <%= item %> ><%= item %></option>
+                    <% }); %>
+              </select>
+            <button class = "submit-btn form-btn" type = "submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<%- include("./partials/footer") %>
